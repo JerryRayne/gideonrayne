@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content ="width=device-width,initial-scale=1.0,user-scalable=no"/>
+<script type="text/javascript" src="lazyquery.js"></script>
+<style>
+*{box-sizing:border-box}
+   #lq-alert{width:100%;max-height:50%;padding:0 10px;position:fixed;bottom:20px;left:0;z-index:999;overflow-y:scroll;}
+   #lq-alert>div{width:100%;padding:2px 0;float:left;background-color:#fff;border:1px solid #ccc;border-radius:10px}
+   #lq-alert>div>span{width:100%;display:block;padding:10px 15px;font-size:14px;border-bottom:1px solid #ccc;overflow:hidden;overflow-wrap:break-word}
+   #lq-alert>div>span:last-child{border:0}
+   
+   body{width:100%;
+   background-color:#ddd;margin:0;
+   padding:0;
+  }
+   .edge{width:100%;
+    background-color:#fff;
+    height:50px;font-size:32px;
+    font-weight:550;
+    
+  }
+   .drive,.sat,.drain1,.drain2{
+   width:100%;
+   height:55px;margin:0;
+   background-color:#fff;
+   text-align:center;
+  }
+   .side-nav {
+    padding-right: 15px;
+  }
+   .side-nav > div {
+    width: 35px;
+    background-color: #EFF1F7;
+    height: 35px;
+    border-radius: 20px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+  }
+   .side-nav > div:nth-of-type(2) {
+    margin: 0 8px;
+  }
+   .gig{background-color:#fff;
+   height:54px;
+  }
+   .kit,.dip{background-color:#fff;
+   height:inherit;
+   float:left;
+  }
+   .sticker {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+   .js-stick {
+    transition: margin 400ms ease 0ms;
+}
+   .sky,.till,.skip,.sit,.skip2{
+       width:100%;background-color:#fff;
+       float:left;height:210px
+   }
+   .bee,.bee1,.post,.deep1,.deep2{float:left;}
+   
+   .let{float:right}
+   
+</style>
+        
+        <link rel="stylesheet" href="assets/fonts/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-- Sticker Start -->
+<div class="sticker">
+    
+<!--edge start-->
+ <div class="edge js-stick">
+    <div class="ege" style="height:inherit;width:50%;color:#474CFF;float:left;text-align:left;padding:8.5px 0 0 8px">facebook</div>
+    
+      <div class="side-nav" style="widh:50%;float:right;font-size:25px;text-align:center;padding:9px 10px 0 0;">
+        
+      <div>
+      <svg fill="#000000" opacity"1.0" baseProfile="full" width="24" height="24" viewBox="0 0 24.00 24.00"><path d="M12 2C6.5 2 2 6.14 2 11.25c0 2.88 1.42 5.45 3.65 7.15l.06 3.6 3.45-1.88-.03-.01c.91.25 1.87.39 2.87.39 5.5 0 10-4.14 10-9.25S17.5 2 12 2m1.03 12.41l-2.49-2.63-5.04 2.63 5.38-5.63 2.58 2.47 4.85-2.47-5.28 5.63z"/></svg>
+    </div>
+ 
+    <div>
+    <svg fill="#000000" opacity="1.0" width="20" height="20" viewBox="0 0 26 28"><path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"/></svg>
+    </div>
+     
+    <div>
+    <svg fill="#000000" opacity="1.0" width="28" height="26" viewBox="0 0 20 20"><path d="M16 10c0 .553-.048 1-.6 1H11v4.4c0 .55-.447.6-1 .6-.553 0-1-.05-1-.6V11H4.6c-.55 0-.6-.447-.6-1 0-.553.05-1 .6-1H9V4.6c0-.552.447-.6 1-.6.553 0 1 .048 1 .6V9h4.4c.552 0 .6.447.6 1z"/></svg>
+    </div>
+   </div>
+ </div>
+<!--edge ending-->
+
+<!--drive start-->
+ <div class="drive" style="positon:sticky;border-bottom:#DBDBDB solid 1px;position:sticky;top:0;">
+       
+   <div class="gig" style="width:33.3%;float:right;">
+              
+     <div class="sat" style="width:50%;float:left;height:54px;padding:13px 0 0 0;">
+             
+ <svg fill="#858585" opacity="1.0" width="26" height="26" viewBox="0 0 28 28"><path d="M14.25 26.5a.246.246 0 0 0-.25-.25A2.261 2.261 0 0 1 11.75 24c0-.141-.109-.25-.25-.25s-.25.109-.25.25A2.754 2.754 0 0 0 14 26.75c.141 0 .25-.109.25-.25zM3.844 22h20.312C21.359 18.844 20 14.562 20 9c0-2.016-1.906-5-6-5S8 6.984 8 9c0 5.563-1.359 9.844-4.156 13zM27 22c0 1.094-.906 2-2 2h-7c0 2.203-1.797 4-4 4s-4-1.797-4-4H3c-1.094 0-2-.906-2-2 2.312-1.953 5-5.453 5-13 0-3 2.484-6.281 6.625-6.891A1.574 1.574 0 0 1 12.5 1.5a1.5 1.5 0 0 1 3 0c0 .219-.047.422-.125.609C19.516 2.718 22 6 22 9c0 7.547 2.688 11.047 5 13z"/></svg>
+     </div>
+         
+     <div class="sat" style="width:50%;float:right;height:54px;padding:5.5px 0 0 0">
+              
+       <svg fill="#858585" opacity="1.0" width="43" height="43" viewBox="0 0 512 512"><path d="M96 241h320v32H96zm0-96h320v32H96zm0 192h320v32H96z"/></svg>
+          </div>
+      </div>
+      
+     <div class="gig" style="width:33.3%;float:left;"> 
+             
+       <div class="sat" style="width:50%;float:left;height:54px;padding:10px 0 0 0;border-bottom:#474cff solid 2px">
+                  
+ <svg fill="#474CFF" opacity="1.0" width="33" height="33" viewBox="0 0 24 24"><path d="M12 3s-6.186 5.34-9.643 8.232A1.041 1.041 0 0 0 2 12a1 1 0 0 0 1 1h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 .98.98 0 0 0-.383-.768C18.184 8.34 12 3 12 3z"/></svg>
+    </div>
+              
+   <div class="sat" style="width:50% ;float:right;height:54px;padding:13.5px 0 0 0">
+                
+ <svg fill="#858585" opacity="1.0" width="30" height="30" viewBox="0 0 512 512"><path d="M265 96c65.3 0 118.7 1.1 168.1 3.3h1.4c23.1 0 42 22 42 49.1v1.1l.1 1.1c2.3 34 3.4 69.3 3.4 104.9.1 35.6-1.1 70.9-3.4 104.9l-.1 1.1v1.1c0 13.8-4.7 26.6-13.4 36.1-7.8 8.6-18 13.4-28.6 13.4h-1.6c-52.9 2.5-108.8 3.8-166.4 3.8h-10.6.1-10.9c-57.8 0-113.7-1.3-166.2-3.7h-1.6c-10.6 0-20.7-4.8-28.5-13.4-8.6-9.5-13.4-22.3-13.4-36.1v-1.1l-.1-1.1c-2.4-34.1-3.5-69.4-3.3-104.7v-.2c-.1-35.3 1-70.5 3.3-104.6l.1-1.1v-1.1c0-27.2 18.8-49.3 41.9-49.3h1.4c49.5-2.3 102.9-3.3 168.2-3.3H265m0-32.2h-18c-57.6 0-114.2.8-169.6 3.3-40.8 0-73.9 36.3-73.9 81.3C1 184.4-.1 220 0 255.7c-.1 35.7.9 71.3 3.4 107 0 45 33.1 81.6 73.9 81.6 54.8 2.6 110.7 3.8 167.8 3.8h21.6c57.1 0 113-1.2 167.9-3.8 40.9 0 74-36.6 74-81.6 2.4-35.7 3.5-71.4 3.4-107.1.1-35.7-1-71.3-3.4-107.1 0-45-33.1-81.1-74-81.1C379.2 64.8 322.7 64 265 64z"/><path d="M207 353.8V157.4l145 98.2-145 98.2z"/></svg>
+           </div>
+     </div>
+        
+   <div class="gig" style="width:33.4%;float:left;"> 
+         
+      <div class="sat" style="width:50%;float:left;height:54px;padding:14.5px 0 0 0">
+           
+ <svg fill="#858585" opacity="1.0" width="27" height="27" viewBox="0 0 28 28"><path d="M14 0c7.734 0 14 6.266 14 14 0 7.688-6.234 14-14 14-7.75 0-14-6.297-14-14C0 6.266 6.266 0 14 0zm9.672 21.109C25.125 19.109 26 16.656 26 14c0-6.609-5.391-12-12-12S2 7.391 2 14c0 2.656.875 5.109 2.328 7.109C4.89 18.312 6.25 16 9.109 16a6.979 6.979 0 0 0 9.782 0c2.859 0 4.219 2.312 4.781 5.109zM20 11c0-3.313-2.688-6-6-6s-6 2.688-6 6 2.688 6 6 6 6-2.688 6-6z"/></svg>
+ 
+      </div>
+      
+    <div class="sat" style="width:50%;float:right;height:54px;padding:13px 0 0 0">
+ <svg fill="#858585" opacity="1.0" baseProfile="full" width="29" height=29 viewBox="0 0 24.00 24.00"><path d="M15 13h1.5v2.823l2.438 1.408-.75 1.299L15 16.689V13zm4-5.002H5v11h4.673A7 7 0 0 1 19 9.673V7.998zm-14 13a2 2 0 0 1-2-2l.01-14c0-1.105.883-2 1.99-2h1v-2h2v2h8v-2h2v2h1a2 2 0 0 1 2 2V11.1a7 7 0 0 1-9.9 9.898H5zm11-9.844a4.846 4.846 0 1 0 0 9.692 4.846 4.846 0 0 0 0-9.692z"/></svg>
+    </div>
+   </div>
+ </div>
+ <!--drive end-->
+</div>
+<!-- Sticker End -->
+
+<!--Begginning for drain1-->
+    
+<div class="drain1" style="height:62px">
+     <div class="kit" style="width:18%;padding-top:10.5px">
+               
+         <div class="dip" style="width:42px;background-color:gold;margin-left:auto;margin-right:auto;display:block;float:none;height:42px;border-radius:80px">
+            <img source src="picture/6p.jpeg" style="width:42px;height:inherit;border-radius:80px">
+                      </img>
+             </div>
+    </div>
+         <div class="kit" style="float:right;width:17%;padding-top:21px;">
+ <svg fill="#3DB42A" opacity="1.0" width="24" height="24" viewBox="0 0 24 24"><path d="M2.016 6h1.969v14.016h14.016v1.969H3.985a1.981 1.981 0 0 1-1.969-1.969V6zm9 6l-3 3.984h12l-4.031-4.969-2.953 3.703zm10.968 3.984c0 1.078-.891 2.016-1.969 2.016h-12c-1.078 0-2.016-.938-2.016-2.016v-12c0-1.078.938-1.969 2.016-1.969h12c1.078 0 1.969.891 1.969 1.969v12z"/></svg>
+               
+         </div>
+           
+         <div class="kit" style="width:64%;float:left;padding-top:15px">
+               <input type="dip" style="width:100%;border-radius:25px;height:35px;padding:0 0 0 15px;float;outline:1;outline-color:#474cff;border:#dbdbdb solid 1px;font-size:15px" placeholder="What's on your mind?"></div>
+         </div>
+       </div>
+<!--drain1 ending-->
+
+<!--drain2 begginning-->
+ <div class="drain2" style="margin-top:10px;height:47px;border-bottom:#dbdbdb solid 5px">
+           
+    <div class="dip" style="width:50%;float:left;height:45px">
+               
+       <div class="dip" style="width:95%;float:right;border-bottom:#474cff solid 2px;color:#474cff;padding:13px;height:45px">Stories</div>
+    </div>
+           
+    <div class="dip" style="width:50%;float:right;height:45px">
+               
+       <div class="dip" style="width:95%;float:left;padding:13px;height:45px">Reels</div>
+    </div>
+           
+</div>
+<!--drain2 ending-->
+
+<!--profile scrolling start-->
+<!--style start-->
+<style>
+    .main {
+        width: 100%;
+        float: left;
+        overflow-x: scroll;
+        white-space: nowrap;
+        background-color:#fff;
+        padding:8px 0 5px 8px;
+    }
+    .box {
+        width: 100px;
+        height: 189px;
+        display: inline-block;
+    }
+    .bg-red {
+        background-color:transparent;
+    }
+    .bg-blue {
+        background-color:transparent;
+    }
+    .bg-green {
+        background-color:transparent;
+    }
+</style>
+<!--style-->
+
+<!--the body-->
+<div class="main">
+ <!--first-->
+  <div class="box bg-red">
+      
+    <div class="skip" style="width:100%;
+      height:189px;
+      float:left;
+      border-radius:12px;
+      border:#dbdbdb solid 1px">
+        
+    <div class="sit" style="height:124px;
+      background-color:green;
+      border-radius:15px 15px 0 0;
+      float:left">
+        <img source src="picture/6p.jpeg" style="width:100%;height:inherit;border-radius:12px 12px 0  0">
+        </img>
+    </div>
+    
+    <div class="sit" style="height:62px;border-radius:0 0 12px 12px;float:left;text-align:center;padding-top:38px;color:#000;background-color:#FAFAFA;">Create story
+  
+        <div class="skip" style="width:38px;height:38px;border-radius:30px;background-color:#474cff;margin:-75px auto 0 auto;display:block;float:none;border:#fff solid 2.5px;">
+            
+ <svg fill="#fff" opacity="1.0" width="30" height="30" viewBox="0 0 20 20"><path d="M16 10c0 .553-.048 1-.6 1H11v4.4c0 .55-.447.6-1 .6-.553 0-1-.05-1-.6V11H4.6c-.55 0-.6-.447-.6-1 0-.553.05-1 .6-1H9V4.6c0-.552.447-.6 1-.6.553 0 1 .048 1 .6V9h4.4c.552 0 .6.447.6 1z"/></svg>
+        </div>
+    </div>
+   </div>
+</div>
+    
+<!--second-->
+ <div class="box bg-blue">
+        
+    <div class="skip" style="width:100%;height:189px;border-radius:12px;border:#dbdbdb solid 1px">
+                
+       <img source src="picture/m.jpeg" style="width:100%;height:187px;border-radius:12px;float:left">
+               
+          <div class="skip" style="width:39px;height:39px;border-radius:30px;background-color:transparent;margin:-179px 0 0 10px;float:left;border:#fff solid 2.5px;border:#474cff solid 2px;padding-top:1.5px">
+                   
+              <img source src="picture/m.jpeg" style="width:32px;height:32px;border-radius:50px;float:none;margin:0 auto 0 auto;display:block"></img>
+           </div>
+               
+         <div class="bee" style="width:100%;color:#fff;float:left;text-align:left;padding:0 0 0 7px;margin-top:-28px;background-color:transparent;font-weight:500">Kaylee</div>
+               
+        </img>
+      </div>
+ </div>
+    
+<!--third-->
+ <div class="box bg-green">
+    
+    <div class="skip" style="width:100%;height:189px;border-radius:12px;border:#dbdbdb solid 1px">
+                 
+       <img source src="picture/6j.jpeg" style="width:100%;height:187px;border-radius:12px;float:left">
+                
+          <div class="skip" style="width:39px;height:39px;border-radius:30px;background-color:transparent;margin:-179px 0 0 10px;float:left;border:#fff solid 2.5px;border:#474cff solid 2px;padding-top:1.5px">
+                   
+             <img source src="picture/6j.jpeg" style="width:32px;height:32px;border-radius:50px;float:none;margin:0 auto 0 auto;display:block"></img>
+          </div>
+               
+          <div class="bee" style="width:100%;color:#fff;float:left;text-align:left;padding:0 0 0 7px;margin-top:-28px;background-color:transparent;font-weight:500"> Kid Danger</div>
+         </img>
+     </div>
+ </div>
+    
+<!--fourth-->
+<div class="box bg-red">
+        
+   <div class="skip" style="width:100%;height:189px;border-radius:12px;border:#dbdbdb solid 1px">
+                 
+      <img source src="picture/6d.jpeg" style="width:100%;height:187px;border-radius:12px;float:left">
+                
+         <div class="skip" style="width:39px;height:39px;border-radius:30px;background-color:transparent;margin:-179px 0 0 10px;float:left;border:#fff solid 2.5px;border:#474cff solid 2px;padding-top:1.5px">
+                   
+            <img source src="picture/6d.jpeg" style="width:32px;height:32px;border-radius:50px;float:none;margin:0 auto 0 auto;display:block"></img>
+         </div>
+               
+         <div class="bee" style="width:100%;color:#fff;float:left;text-align:left;padding:0 0 0 7px;margin-top:-28px;background-color:transparent;font-weight:500"> Esther ade</div>
+       </img>
+ 
+    </div>
+</div>
+    
+<!--fifth-->
+<div class="box bg-blue">
+        
+     <div class="skip" style="width:100%;height:189px;border-radius:12px;border:#dbdbdb solid 1px">
+                 
+       <img source src="picture/6c.jpeg" style="width:100%;height:187px;border-radius:12px;float:left">
+                
+          <div class="skip" style="width:39px;height:39px;border-radius:30px;background-color:transparent;margin:-179px 0 0 10px;float:left;border:#fff solid 2.5px;border:#474cff solid 2px;padding-top:1.5px">
+                   
+             <img source src="picture/6c.jpeg" style="width:32px;height:32px;border-radius:50px;float:none;margin:0 auto 0 auto;display:block"></img>
+           </div>
+               
+        <div class="bee" style="width:100%;color:#fff;float:left;text-align:left;padding:0 0 0 7px;margin-top:-28px;background-color:transparent;font-weight:500"> Joker</div>
+      </img>
+   </div>
+</div>
+    
+<!--sixth-->
+ <div class="box bg-green">
+        
+     <div class="skip" style="width:100%;height:189px;border-radius:12px;border:#dbdbdb solid 1px">
+                 
+         <img source src="picture/6i.jpeg" style="width:100%;height:187px;border-radius:12px;float:left">
+                
+             <div class="skip" style="width:39px;height:39px;border-radius:30px;background-color:transparent;margin:-179px 0 0 10px;float:left;border:#fff solid 2.5px;border:#474cff solid 2px;padding-top:1.5px">
+                   
+                <img source src="picture/6i.jpeg" style="width:32px;height:32px;border-radius:50px;float:none;margin:0 auto 0 auto;display:block"></img>
+              </div>
+               
+             <div class="bee" style="width:100%;color:#fff;float:left;text-align:left;padding:0 0 0 7px;margin-top:-28px;background-color:transparent;font-weight:500"> Jasper</div>
+           </img>
+      </div>
+</div>
+   
+<!--seventh--> 
+ <div class="box bg-red">
+        
+     <div class="skip" style="width:100%;height:189px;border-radius:12px;border:#dbdbdb solid 1px">
+                 
+       <img source src="picture/7i.jpeg" style="width:100%;height:187px;border-radius:12px;float:left">
+                
+          <div class="skip" style="width:39px;height:39px;border-radius:30px;background-color:transparent;margin:-179px 0 0 10px;float:left;border:#fff solid 2.5px;border:#474cff solid 2px;padding-top:1.5px">
+                   
+             <img source src="picture/7m.jpeg" style="width:32px;height:32px;border-radius:50px;float:none;margin:0 auto 0 auto;display:block"></img>
+          </div>
+               
+          <div class="bee" style="width:100%;color:#fff;float:left;text-align:left;padding:0 0 0 7px;margin-top:-28px;background-color:transparent;font-weight:500"> Nickelodeon
+          </div>
+        </img>
+    </div>
+</div>
+    
+<!--eighth-->  
+ <div class="box bg-blue">
+         
+    <div class="skip" style="width:100%;height:189px;border-radius:12px;border:#dbdbdb solid 1px">
+                 
+      <img source src="picture/y.jpeg" style="width:100%;height:187px;border-radius:12px;float:left">
+                
+        <div class="skip" style="width:39px;height:39px;border-radius:30px;background-color:transparent;margin:-179px 0 0 10px;float:left;border:#fff solid 2.5px;border:#474cff solid 2px;padding-top:1.5px">
+                   
+           <img source src="picture/o.jpeg" style="width:32px;height:32px;border-radius:50px;float:none;margin:0 auto 0 auto;display:block"></img>
+        </div>
+               
+        <div class="bee" style="width:100%;color:#fff;float:left;text-align:left;padding:0 0 0 7px;margin-top:-28px;background-color:transparent;font-weight:500"> Marvel</div>
+       </img>
+ 
+      </div>
+   </div>
+</div>
+<!--profile scrolling end-->
+
+<!--post start-->
+<div class="post" style="width:100%;background-color:blue;margin-top:10px">
+    
+<!--first line-->
+    <div class="sky" style="background-color:#fff;height:55px;">
+        
+       <div class="till" style="width:70%;height:inherit;float:left;padding:12px 0px 0 9px;font-weight:600">
+           
+        <div class="sit" style="width:40px;height:40px;border-radius:50px;margin:0 5px 0 0;float:left;text-align:center">
+          
+          <img source src="picture/6j.jpeg" style="width:inherit;height:inherit;border-radius:50px;float:left"></img>
+        </div>
+        
+         Henry Danger
+          <svg fill="#000" width="12" height="12" opacity="1.0" viewBox="0 0 20 20"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0c0-1.215-.984-2.2-2.2-2.2s-2.2.985-2.2 2.2z"/></svg>
+          
+          <span style="color:#474cff;float:none;">Follow</span>
+          
+         <p style="margin:1px 0 0 -2px;font-size:12.5px;color:#808080;font-weight:400;display:flex;padding:0 0 0 0px">Suggested for you
+         
+         <svg fill="#000" width="8.5px" height="13.5px" opacity="1.0" viewBox="0 0 20 20"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0c0-1.215-.984-2.2-2.2-2.2s-2.2.985-2.2 2.2z"/></svg>4d
+         <svg fill="#000" width="8.5px" height="13.5px" opacity="1.0" viewBox="0 0 20 20"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0c0-1.215-.984-2.2-2.2-2.2s-2.2.985-2.2 2.2z"/></svg>
+         <svg fill="#757575" opacity="1.0" baseProfile="full" width="14" height="14" viewBox="0 0 24.00 24.00"><path d="M17.896 17.392A1.993 1.993 0 0 0 16 15.999h-1v-3a1 1 0 0 0-1-1H8v-2h2a1 1 0 0 0 1-1v-2h2a2 2 0 0 0 2-2v-.413a7.998 7.998 0 0 1 5 7.413 7.96 7.96 0 0 1-2.104 5.393zM11 19.929c-3.945-.493-7-3.852-7-7.93 0-.617.076-1.215.208-1.792L9 14.999v1a2 2 0 0 0 2 2m1-16c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10z"/></svg> </p>
+       </div>
+       
+       <div class="sit" style="width:30%;float:right;height:inherit;padding:2px 3px 0 0;display:flex;justify-content:right;">
+           
+           <div class="deep" style="float:left;height:inherit;margin-right:15px;padding-top:4px">
+           <svg fill="#808080" opacity="1.0" baseProfile="full" width="26" height="26" viewBox="0 0 24.00 24.00"><path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/></svg>
+           </div>
+          
+           <svg fill="#808080" opacity="1.0" width="35" height="35" viewBox="0 0 512 512"><path d="M256 48C140.559 48 48 140.559 48 256c0 115.436 92.559 208 208 208 115.435 0 208-92.564 208-208 0-115.441-92.564-208-208-208zm104.002 282.881l-29.12 29.117L256 285.117l-74.881 74.881-29.121-29.117L226.881 256l-74.883-74.881 29.121-29.116L256 226.881l74.881-74.878 29.12 29.116L285.119 256l74.883 74.881z"/></svg>
+       </div>
+    </div>
+    <!--first line ending-->
+    
+<!--second line-->
+    <div class="till" style="height:27px;float:left;font-size:16px;font-weight:400;padding:5px 0 0 8px">Jace Norman
+   <span class="deep1" style="color:#808080;margin:0;float:none">...see more</span>
+   </div>
+<!--secon line ending-->
+
+<!--image-->
+       <img source src="picture/6n.jpeg" style="width:100%">
+<!--image ending-->
+    
+<!--third line-->
+    <div class="till" style="height:45px;font-size:14px">
+       
+       <div class="till" style="width:50%;height:inherit;float:left;padding:14px 0 0 9px;">
+           
+        <div class="sit" style="width:18px;background-color:#474cff;height:18px;border-radius:50px;margin:0 5px 0 0;;display:flex;justify-content: center;align-items:center;float:left;text-align:center">
+           
+<svg fill="#fff"  width="10" height="10" viewBox="0 0 1200 1200"><path d="M717.534 60.514c42.51-.457 82.729 43.455 110.594 74.778 65.435 80.402 29.326 169.5 14.94 267.032h298.455c40.347.301 61.029 30.64 58.225 71.631l-83.567 517.806c-18.937 66.216-92.545 124.507-170.138 132.786H393.96c-32.659-.426-57.13-23.607-59.691-59.691v-602.84c.424-32.654 23.607-57.13 59.691-59.689h137.251L666.999 97.939c7.552-16.428 27.347-37.054 50.535-37.425zM217.89 390.388c22.971.293 41.284 16.175 43.21 41.819v665.534c-.333 22.479-18.962 39.989-43.21 41.748H43.286c-22.155-.304-41.2-17.095-43.286-41.748V432.208c.316-23.22 17.976-40.06 43.286-41.819l174.604-.001z"/></svg> 
+           
+        </div>
+         Elizabeth and others
+       </div>
+       
+       <div class="sit" style="width:50%;float:right;height:inherit;padding:14px 8px 0 0;text-align:right">1.2k comments
+ <svg fill="#757575" width="10" height="10" opacity="1.0" viewBox="0 0 20 20"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0c0-1.215-.984-2.2-2.2-2.2s-2.2.985-2.2 2.2z"/></svg>20 shares
+       
+       </div>
+     </div>
+     <!--third line ending-->
+    
+    <!--fourth line-->
+    <div class="skip2" style="background-color:#fff;height:45px;text-align:center;">
+        
+      <div class="skip1" style="width:96%;margin:0 auto 0 auto;float:none;display:block;height:inherit;padding-top:1px;font-size:13px;border-top:#dbdbdb solid 1px">
+        
+        <div class="sit" style="width:32%;background-color:#fff;
+        height:44px;
+        text-align:right;
+        display:flex;justify-content:center;align-items:center;justify-content:center;">
+            
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+           <span class="bee" style="margin:5px 0 0 5px"> Like</span></div>
+        
+        <div class="sky" style="width:36%;height:44px;float:left;display:flex;justify-content:center;align-items:center;justify-content:center;padding-top:3px;">
+            
+            <svg fill="#000" opacity="1.0" width="19" height="19" viewBox="0 0 17 17"><path d="M15.5 0h-14C.673 0 0 .673 0 1.5v10c0 .827.673 1.5 1.5 1.5H2v4.102L6.688 13H15.5c.827 0 1.5-.673 1.5-1.5v-10c0-.827-.673-1.5-1.5-1.5zm.5 11.5a.5.5 0 0 1-.5.5H6.312L3 14.898V12H1.5a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v10z"/></svg>
+            
+            <span class="bee" style="margin:0 0 0 5px">Comment</span></div>
+        
+        <div class="till" style="width:32%;height:44px;float:right;padding-top:3px;display:flex;justify-content:center;align-items:center;justify-content:center">
+            
+            <svg fill="#000" opacity="1.0" width="22" height="22" viewBox="0 0 8 8"><path d="M5 0v2C1 2 0 4.05 0 7c.52-1.98 2-3 4-3h1v2l3-3.16L5 0z"/></svg>
+           <span class="bee" style="margin:0 0 0 5px">Share</span></div>
+      </div>
+    </div>
+    <!--fourth line ending-->
+    
+</div>
+<!--post end-->
+
+
+<!--post2 start-->
+<div class="post" style="width:100%;background-color:blue;margin-top:10px">
+    
+<!--first line-->
+    <div class="sky" style="background-color:#fff;height:55px;">
+        
+       <div class="till" style="width:70%;height:inherit;float:left;padding:12px 0px 0 9px;font-weight:600">
+           
+        <div class="sit" style="width:40px;height:40px;border-radius:50px;margin:0 5px 0 0;float:left;text-align:center">
+          
+          <img source src="picture/6k.jpeg" style="width:inherit;height:inherit;border-radius:50px;float:left"></img>
+        </div>
+        
+         Danger Club
+          <svg fill="#000" width="12" height="12" opacity="1.0" viewBox="0 0 20 20"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0c0-1.215-.984-2.2-2.2-2.2s-2.2.985-2.2 2.2z"/></svg>
+          
+          <span style="color:#474cff;float:none;">Follow</span>
+          
+         <p style="margin:1px 0 0 -2px;font-size:12.5px;color:#808080;font-weight:400;display:flex;padding:0 0 0 0px">Suggested for you
+         
+         <svg fill="#000" width="8.5px" height="13.5px" opacity="1.0" viewBox="0 0 20 20"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0c0-1.215-.984-2.2-2.2-2.2s-2.2.985-2.2 2.2z"/></svg>sep 7
+         <svg fill="#000" width="8.5px" height="13.5px" opacity="1.0" viewBox="0 0 20 20"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0c0-1.215-.984-2.2-2.2-2.2s-2.2.985-2.2 2.2z"/></svg>
+         <svg fill="#757575" opacity="1.0" baseProfile="full" width="14" height="14" viewBox="0 0 24.00 24.00"><path d="M17.896 17.392A1.993 1.993 0 0 0 16 15.999h-1v-3a1 1 0 0 0-1-1H8v-2h2a1 1 0 0 0 1-1v-2h2a2 2 0 0 0 2-2v-.413a7.998 7.998 0 0 1 5 7.413 7.96 7.96 0 0 1-2.104 5.393zM11 19.929c-3.945-.493-7-3.852-7-7.93 0-.617.076-1.215.208-1.792L9 14.999v1a2 2 0 0 0 2 2m1-16c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10z"/></svg> </p>
+       </div>
+       
+       <div class="sit" style="width:30%;float:right;height:inherit;padding:2px 3px 0 0;display:flex;justify-content:right;">
+           
+           <div class="deep" style="float:left;height:inherit;margin-right:15px;padding-top:4px">
+           <svg fill="#808080" opacity="1.0" baseProfile="full" width="26" height="26" viewBox="0 0 24.00 24.00"><path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/></svg>
+           </div>
+          
+           <svg fill="#808080" opacity="1.0" width="35" height="35" viewBox="0 0 512 512"><path d="M256 48C140.559 48 48 140.559 48 256c0 115.436 92.559 208 208 208 115.435 0 208-92.564 208-208 0-115.441-92.564-208-208-208zm104.002 282.881l-29.12 29.117L256 285.117l-74.881 74.881-29.121-29.117L226.881 256l-74.883-74.881 29.121-29.116L256 226.881l74.881-74.878 29.12 29.116L285.119 256l74.883 74.881z"/></svg>
+       </div>
+    </div>
+    <!--first line ending-->
+    
+<!--second line-->
+    <div class="till" style="height:27px;float:left;font-size:16px;font-weight:400;padding:5px 0 0 8px">Ella anderson
+   <span class="deep1" style="color:#808080;margin:0;float:none">...see more</span>
+   </div>
+<!--secon line ending-->
+
+<!--image-->
+       <img source src="picture/6f.jpeg" style="width:100%">
+<!--image ending-->
+    
+<!--third line-->
+    <div class="till" style="height:45px;font-size:14px">
+       
+       <div class="till" style="width:50%;height:inherit;float:left;padding:14px 0 0 9px;">
+           
+        <div class="sit" style="width:18px;background-color:#474cff;height:18px;border-radius:50px;margin:0 5px 0 0;;display:flex;justify-content: center;align-items:center;float:left;text-align:center">
+           
+<svg fill="#fff"  width="10" height="10" viewBox="0 0 1200 1200"><path d="M717.534 60.514c42.51-.457 82.729 43.455 110.594 74.778 65.435 80.402 29.326 169.5 14.94 267.032h298.455c40.347.301 61.029 30.64 58.225 71.631l-83.567 517.806c-18.937 66.216-92.545 124.507-170.138 132.786H393.96c-32.659-.426-57.13-23.607-59.691-59.691v-602.84c.424-32.654 23.607-57.13 59.691-59.689h137.251L666.999 97.939c7.552-16.428 27.347-37.054 50.535-37.425zM217.89 390.388c22.971.293 41.284 16.175 43.21 41.819v665.534c-.333 22.479-18.962 39.989-43.21 41.748H43.286c-22.155-.304-41.2-17.095-43.286-41.748V432.208c.316-23.22 17.976-40.06 43.286-41.819l174.604-.001z"/></svg> 
+           
+        </div>
+         305k
+       </div>
+       
+       <div class="sit" style="width:50%;float:right;height:inherit;padding:14px 8px 0 0;text-align:right">7.9k comments
+ <svg fill="#757575" width="10" height="10" opacity="1.0" viewBox="0 0 20 20"><path d="M7.8 10a2.2 2.2 0 0 0 4.4 0c0-1.215-.984-2.2-2.2-2.2s-2.2.985-2.2 2.2z"/></svg>93 shares
+       
+       </div>
+     </div>
+     <!--third line ending-->
+    
+    <!--fourth line-->
+    <div class="skip2" style="background-color:#fff;height:45px;text-align:center;">
+        
+      <div class="skip1" style="width:96%;margin:0 auto 0 auto;float:none;display:block;height:inherit;padding-top:1px;font-size:13px;border-top:#dbdbdb solid 1px">
+        
+        <div class="sit" style="width:32%;background-color:#fff;
+        height:44px;
+        text-align:right;
+        display:flex;justify-content:center;align-items:center;justify-content:center;">
+            
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+           <span class="bee" style="margin:5px 0 0 5px"> Like</span></div>
+        
+        <div class="sky" style="width:36%;height:44px;float:left;display:flex;justify-content:center;align-items:center;justify-content:center;padding-top:3px;">
+            
+            <svg fill="#000" opacity="1.0" width="19" height="19" viewBox="0 0 17 17"><path d="M15.5 0h-14C.673 0 0 .673 0 1.5v10c0 .827.673 1.5 1.5 1.5H2v4.102L6.688 13H15.5c.827 0 1.5-.673 1.5-1.5v-10c0-.827-.673-1.5-1.5-1.5zm.5 11.5a.5.5 0 0 1-.5.5H6.312L3 14.898V12H1.5a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v10z"/></svg>
+            
+            <span class="bee" style="margin:0 0 0 5px">Comment</span></div>
+        
+        <div class="till" style="width:32%;height:44px;float:right;padding-top:3px;display:flex;justify-content:center;align-items:center;justify-content:center">
+            
+            <svg fill="#000" opacity="1.0" width="22" height="22" viewBox="0 0 8 8"><path d="M5 0v2C1 2 0 4.05 0 7c.52-1.98 2-3 4-3h1v2l3-3.16L5 0z"/></svg>
+           <span class="bee" style="margin:0 0 0 5px">Share</span></div>
+      </div>
+    </div>
+    <!--fourth line ending-->
+    
+</div>
+<!--post end-->
+
+
+
+
+<!--script start-->
+<script>
+var doc = document.body;
+var scrolling, scrollingY = 0, scrollingType;
+    
+function testScroll(){
+    scrolling = Math.round(doc.scrollTop);
+    
+    if (scrolling >= (scrollingY + 5)) {
+        scrollingY = scrolling;
+        scrollingType = false
+    }
+    else if (scrolling <= (scrollingY - 5)) {
+        scrollingY = scrolling;
+        scrollingType = true
+    }
+    
+    return scrollingType
+}
+
+
+var sticker = Q(".sticker");
+var newSticker = Q("<div>").css("width:100%;height:"+sticker[0].clientHeight+"px");
+
+sticker.after(newSticker);
+
+Q(window).on("scroll", function(){
+    if (testScroll()) {
+        Q(".js-stick").css("margin-top:0");
+    } else {
+        Q(".js-stick").css("margin-top:-50px");
+    }
+    Q.lert(testScroll(), 1)
+})
+
+</script>
+<!--script end-->
+</body>
+</html>
